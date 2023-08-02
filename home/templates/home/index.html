@@ -1,16 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>ROTOTO</title>
-
-</head>
-<body>
-<form id="myForm" method="POST" action="/button-click">
-  <!-- Other form elements -->
-  <button type="submit" id="btnClick">Click Me</button>
-</form>
-
+{% extends "base.html" %}
+{% block content %}
+<h1> Welcome </h1>
 <p> Today is: {{today}}</p>
-</body>
-</html>
+
+<a href="{% url 'notes.list' %}" class="btn btn-primary">Check this notes</a>
+
+{% endblock %}
